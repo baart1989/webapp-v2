@@ -2,7 +2,7 @@
 
 @layer components {
     .table-responsive {
-        @apply relative overflow-x-scroll md:overflow-x-auto;
+        @apply relative overflow-y-auto md:overflow-x-auto h-screen-1/2 md:h-full;
     }
 
     .table-responsive table {
@@ -33,13 +33,12 @@
         @apply h-[70px] first:pl-[20px] last:pr-[20px] md:first:pl-[44px] md:last:pr-[44px] bg-white dark:bg-blue-4;
     }
 
-    .table-sticky-cell {
-        @apply first:sticky first:left-0 first:z-20;
+    .table-sticky-column thead th {
+        @apply sticky first:left-0 first:z-30 top-0 z-20;
     }
 
-    .table-sticky-column thead th,
     .table-sticky-column tbody td {
-        @apply table-sticky-cell;
+        @apply first:sticky first:left-0 first:z-10;
     }
 
     .table-responsive tbody td table tr, .table-responsive tbody td table td {
